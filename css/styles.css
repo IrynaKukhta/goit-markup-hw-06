@@ -104,7 +104,7 @@ a {
   height: 4px;
   border-radius: 5px;
   position: absolute;
-  bottom: -32px;
+  bottom: -33px;
   left: 0;
   background-color: var(--accent-color);
 }
@@ -178,6 +178,7 @@ a {
 .hero-title {
   font-weight: 900;
   font-size: 44px;
+  width: 696px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
@@ -203,40 +204,7 @@ a {
 .hero-ordering-button:hover {
   background-color: #188ce8;
 }
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-.close-btn {
-  width: 30px;
-  height: 30px;
-  background-image: url("../images/close-black-18dp\ \(2\)\ 1.svg");
-  background-position: center;
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  border-color: var(--icon-color);
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 528px;
-  min-height: 581px;
-  padding: 30px;
-  background-color: var(--primary-background-color);
-}
+
 /*--------our strength section--------*/
 .visually-hidden {
   position: absolute;
@@ -498,6 +466,7 @@ p.our-strenght-list-text {
   line-height: 1.17;
   margin-bottom: 20px;
   text-transform: uppercase;
+  display: block;
 }
 .footer-social-media-icons {
   display: flex;
@@ -522,6 +491,226 @@ p.our-strenght-list-text {
   background-color: var(--accent-color);
   fill: var(--primary-background-color);
 }
+.footer-form {
+  margin-left: 93px;
+}
+.footer-form label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-background-color);
+}
+.input-form {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-form input {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  border-radius: 4px;
+  color: var(--primary-background-color);
+}
+.footer-form-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  background-color: var(--accent-color);
+  padding: 10px 28px;
+  margin-left: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--primary-background-color);
+}
+
+.footer-form-btn:hover {
+  cursor: pointer;
+}
+/*------modal window-----*/
+.backdrop {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.close-btn {
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/close-black-18dp\ \(2\)\ 1.svg");
+  background-position: center;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  border-color: var(--icon-color);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+  background-color: var(--primary-background-color);
+}
+.feedback-title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.17px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+/*-----feedback form-----*/
+.feedback {
+  display: flex;
+  flex-direction: column;
+  width: 448px;
+  padding-top: 12px;
+}
+.form-user-id,
+.form-user-tel,
+.form-user-mail,
+.form-comment {
+  position: relative;
+  width: 100%;
+  /* display: flex;
+  flex-direction: column; */
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--secondary-text-color);
+  margin-bottom: 10px;
+}
+.input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.policy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+label {
+  margin-bottom: 4px;
+  margin-left: 4px;
+  text-align: left;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--secondary-text-color);
+}
+.checkbox-tag {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+  display: flex;
+}
+.checkbox-tag::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--primary-text-color);
+  border-radius: 4px;
+  margin-right: 7px;
+}
+.checkbox:checked + .checkbox-tag::before {
+  border: none;
+  background-image: url(../images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.form-user-id input,
+.form-user-tel input,
+.form-user-mail input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.form-user-id input:hover,
+.form-user-tel input:hover,
+.form-user-mail input:hover,
+.form-comment input:hover,
+.form-user-id input:focus,
+.form-user-tel input:focus,
+.form-user-mail input:focus,
+.form-comment input:focus {
+  border-color: var(--accent-color);
+  cursor: pointer;
+}
+input:focus,
+textarea:focus {
+  outline: none !important;
+  border: 1px solid var(--accent-color) !important;
+}
+input {
+  padding-left: 11px;
+  color: var(--primary-text-color);
+}
+textarea {
+  padding-left: 11px;
+  color: var(--primary-text-color);
+  resize: none;
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+.policy-agreement-link {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+.form-submit-btn {
+  width: 200px;
+  height: 50px;
+  background-color: var(--accent-color);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+  color: var(--primary-background-color);
+  margin: 30px auto 0;
+}
+.form-submit-btn:hover {
+  cursor: pointer;
+}
+
 /*----------------------------------prtfolio page----------------*/
 /*------------------------main content--------------*/
 /*----------------filters-------------*/
