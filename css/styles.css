@@ -492,7 +492,7 @@ p.our-strenght-list-text {
   fill: var(--primary-background-color);
 }
 .footer-form {
-  margin-left: 93px;
+  margin-left: auto;
 }
 .footer-form label {
   display: flex;
@@ -522,6 +522,8 @@ p.our-strenght-list-text {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
   width: 200px;
   height: 50px;
   background-color: var(--accent-color);
@@ -546,6 +548,7 @@ p.our-strenght-list-text {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -554,14 +557,22 @@ p.our-strenght-list-text {
 .close-btn {
   width: 30px;
   height: 30px;
+  background: #ffffff;
   background-image: url("../images/close-black-18dp\ \(2\)\ 1.svg");
   background-position: center;
   border-radius: 50%;
   background-repeat: no-repeat;
-  border-color: var(--icon-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 8px;
+  right: 8px;
+}
+.close-btn:hover,
+.close-btn:focus {
+  border-color: var(--accent-color);
+  background-image: url("../images/close-icon-blue.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .modal {
@@ -580,14 +591,14 @@ p.our-strenght-list-text {
   line-height: 1.17px;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 12px;
+  margin-bottom: 22px;
 }
 /*-----feedback form-----*/
 .feedback {
   display: flex;
   flex-direction: column;
   width: 448px;
-  padding-top: 12px;
+  /* padding-top: 12px; */
 }
 .form-user-id,
 .form-user-tel,
@@ -714,7 +725,10 @@ textarea {
 .form-submit-btn {
   width: 200px;
   height: 50px;
-  background-color: var(--accent-color);
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
@@ -725,7 +739,9 @@ textarea {
   color: var(--primary-background-color);
   margin: 30px auto 0;
 }
-.form-submit-btn:hover {
+.form-submit-btn:hover,
+.form-submit-btn:focus {
+  background: #188ce8;
   cursor: pointer;
 }
 
